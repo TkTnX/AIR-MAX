@@ -1,0 +1,103 @@
+.sneaker-slider {
+  &__buy-btn {
+    position: absolute;
+    z-index: 5;
+  }
+  position: relative;
+}
+.swiper {
+  overflow: hidden;
+}
+.swiper-wrapper {
+  display: inline-flex;
+  position: relative;
+}
+
+.sneaker-slide {
+  background: linear-gradient(245deg, #de343d 15.97%, #ffb800 85.7%);
+  color: rgba(255, 255, 255, 0.14);
+  font-size: clamp(15.625rem, 14.611rem + 5.07vw, 20rem);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  position: relative;
+  padding: 45px 0 40px;
+  z-index: 2;
+
+  &::before {
+    content: "AIR MAX";
+    position: absolute;
+    z-index: -5;
+    @media (max-width: 860px) {
+      z-index: 5;
+      color: rgba(255, 255, 255, 0.473);
+      font-size: clamp(6.25rem, 4.801rem + 7.25vw, 12.5rem);
+    }
+  }
+}
+.swiper-pagination {
+  position: absolute;
+
+  display: flex;
+  justify-content: space-evenly;
+  gap: 42px;
+  flex-direction: column;
+  z-index: 6;
+  top: 40%;
+  left: 33px;
+  @media (max-width: 525px) {
+    top: 20%;
+  }
+  @media (max-width: 320px) {
+    display: none;
+  }
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+.swiper-buyBtn {
+  display: block;
+  position: absolute;
+  bottom: 80px;
+  right: 200px;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  text-align: center;
+
+  &:hover {
+    background-color: #fff;
+    color: black;
+  }
+  &:active {
+    background-color: #d3d3d3;
+    bottom: 75px;
+  }
+  &:focus {
+    border-color: black;
+  }
+  @media (max-width: 890px) {
+    right: 50px;
+    bottom: 30px;
+    @media (max-width: 456px) {
+      padding: 6px 15px;
+      font-size: 15px;
+      bottom: 10px;
+    }
+  }
+}

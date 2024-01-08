@@ -1,0 +1,388 @@
+/* base */
+/* Fonst */
+@font-face {
+  font-family: "monument";
+  src: url("/sneaker-store/fonts/Monument/MonumentExtended-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monument bold";
+  src: url("/sneaker-store/fonts/Monument/MonumentExtended-Ultrabold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+/* styles */
+:root {
+  --textColor: #000;
+  --accent: #de343d;
+}
+
+body {
+  color: var(--textColor);
+  font-family: "monument";
+}
+
+.currentPage {
+  font-family: "monument bold";
+  font-weight: 800 !important;
+}
+
+a {
+  color: inherit;
+}
+
+.btn {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 52px; /* 255.727% */
+  letter-spacing: 1.631px;
+  border: 1.5px solid white;
+  padding: 6px 25px;
+  cursor: pointer;
+}
+
+.body-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.open {
+  transform: translateX(-350px);
+}
+
+.header__burger-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  z-index: 15;
+  display: none;
+}
+.header__burger-btn:hover span {
+  background-color: rgb(117, 117, 117);
+}
+.header__burger-btn:active span {
+  background-color: #5e5e5e;
+}
+.header__burger-btn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  left: 10px;
+  background-color: black;
+  transition: all 0.2s ease-in;
+  will-change: transform;
+}
+.header__burger-btn span:nth-child(1) {
+  transform: translateY(-10px);
+}
+.header__burger-btn span:nth-child(3) {
+  transform: translateY(10px);
+}
+@media (max-width: 730px) {
+  .header__burger-btn {
+    display: block;
+  }
+}
+
+.header__burger-btn-cross span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+.header__burger-btn-cross span:nth-child(2) {
+  opacity: 0;
+}
+.header__burger-btn-cross span:nth-child(3) {
+  transform: translate(0) rotate(-45deg);
+}
+
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  /* color: inherit; */
+  text-decoration: none;
+  /* display: inline-block; */
+}
+
+a:hover {
+  /* color: inherit; */
+  text-decoration: none;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+/* blocks */
+.header {
+  position: relative;
+}
+.header__nav {
+  padding: 29px;
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 41px;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s ease-in;
+  will-change: transform;
+}
+@media (max-width: 730px) {
+  .header__list {
+    padding-top: 50px;
+    position: absolute;
+    display: block;
+    width: 350px;
+    z-index: 5;
+    background-color: #fff;
+    right: -350px;
+  }
+}
+.header__item:last-child {
+  position: absolute;
+  right: 84px;
+}
+.header__item:last-child::before {
+  content: "";
+  position: absolute;
+  background-image: url("/sneaker-store/img/icons/zoom.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 21px;
+  left: -30px;
+  display: block;
+}
+@media (max-width: 730px) {
+  .header__item:last-child::before {
+    display: none;
+  }
+}
+@media (max-width: 1005px) {
+  .header__item:last-child {
+    position: relative;
+    right: 0;
+  }
+}
+@media (max-width: 730px) {
+  .header__item {
+    padding-bottom: 30px;
+    text-align: center;
+  }
+}
+.header__link {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.52px; /* 213.106% */
+  letter-spacing: 0.86px;
+}
+
+.sneaker-slider {
+  position: relative;
+}
+.sneaker-slider__buy-btn {
+  position: absolute;
+  z-index: 5;
+}
+
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: inline-flex;
+  position: relative;
+}
+
+.sneaker-slide {
+  background: linear-gradient(245deg, #de343d 15.97%, #ffb800 85.7%);
+  color: rgba(255, 255, 255, 0.14);
+  font-size: clamp(15.625rem, 14.611rem + 5.07vw, 20rem);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  position: relative;
+  padding: 45px 0 40px;
+  z-index: 2;
+}
+.sneaker-slide::before {
+  content: "AIR MAX";
+  position: absolute;
+  z-index: -5;
+}
+@media (max-width: 860px) {
+  .sneaker-slide::before {
+    z-index: 5;
+    color: rgba(255, 255, 255, 0.473);
+    font-size: clamp(6.25rem, 4.801rem + 7.25vw, 12.5rem);
+  }
+}
+
+.swiper-pagination {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 42px;
+  flex-direction: column;
+  z-index: 6;
+  top: 40%;
+  left: 33px;
+}
+@media (max-width: 525px) {
+  .swiper-pagination {
+    top: 20%;
+  }
+}
+@media (max-width: 320px) {
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+.swiper-buyBtn {
+  display: block;
+  position: absolute;
+  bottom: 80px;
+  right: 200px;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  text-align: center;
+}
+.swiper-buyBtn:hover {
+  background-color: #fff;
+  color: black;
+}
+.swiper-buyBtn:active {
+  background-color: #d3d3d3;
+  bottom: 75px;
+}
+.swiper-buyBtn:focus {
+  border-color: black;
+}
+@media (max-width: 890px) {
+  .swiper-buyBtn {
+    right: 50px;
+    bottom: 30px;
+  }
+}
+@media (max-width: 890px) and (max-width: 456px) {
+  .swiper-buyBtn {
+    padding: 6px 15px;
+    font-size: 15px;
+    bottom: 10px;
+  }
+}/*# sourceMappingURL=main.css.map */

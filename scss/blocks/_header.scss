@@ -1,0 +1,70 @@
+.header {
+  position: relative;
+  // .header__nav
+
+  &__nav {
+    padding: 29px;
+  }
+
+  // .header__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 41px;
+    justify-content: center;
+    position: relative;
+    transition: all 0.2s ease-in;
+    will-change: transform;
+    @media (max-width: 730px) {
+      padding-top: 50px;
+      position: absolute;
+      display: block;
+      width: 350px;
+      z-index: 5;
+      background-color: #fff;
+      right: -350px;
+    }
+  }
+
+  // .header__item
+
+  &__item {
+    &:last-child {
+      position: absolute;
+      right: 84px;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("/sneaker-store/img/icons/zoom.svg");
+        background-size: auto;
+        background-repeat: no-repeat;
+        width: 21px;
+        height: 21px;
+        left: -30px;
+        display: block;
+        @media (max-width: 730px) {
+          display: none;
+        }
+      }
+      @media (max-width: 1005px) {
+        position: relative;
+        right: 0;
+      }
+    }
+    @media (max-width: 730px) {
+      padding-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  // .header__link
+
+  &__link {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27.52px; /* 213.106% */
+    letter-spacing: 0.86px;
+  }
+}
