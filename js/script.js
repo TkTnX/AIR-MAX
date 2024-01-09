@@ -9,11 +9,31 @@ const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
   },
+});
+
+/* SLIDER 2 (TOP SELLERS) */
+
+const swiper2 = new Swiper(".swiper2", {
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 40,
 
   // Navigation arrows
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".sellers__btn-next",
+    prevEl: ".sellers__btn-prev",
+  },
+  breakpoints: {
+    575: {
+      slidesPerView: 2,
+    },
+    1000: {
+      spaceBetween: 0,
+      slidesPerView: 3,
+    },
+    1385: {
+      slidesPerView: 4,
+    },
   },
 });
 

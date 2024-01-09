@@ -1,0 +1,112 @@
+.top-sellers {
+  padding: 84px 0 100px;
+  &__container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
+
+  // .top-sellers__top
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 750px) {
+      flex-direction: column;
+    }
+  }
+
+  // .top-sellers__sort-list
+
+  &__sort-list {
+    display: flex;
+    align-items: center;
+    @media (max-width: 750px) {
+      padding-top: 35px;
+    }
+    @media (max-width: 325px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+  &__see-btn {
+    text-align: center;
+  }
+  &__btn {
+    display: inline-block;
+
+    margin-top: 78px;
+    color: var(--gray);
+    font-size: 20px;
+    line-height: 2.55;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: #9e9e9e;
+    }
+    &:active {
+      color: #4e4e4e;
+    }
+  }
+  // .top-sellers__sort-item
+
+  &__sort-item {
+    color: #808080;
+
+    font-size: 16px;
+    letter-spacing: 1.256px;
+    @media (max-width: 410px) {
+      font-size: 14px;
+    }
+    &:not(:last-child) {
+      margin-left: clamp(1.875rem, 0.966rem + 4.55vw, 4.375rem);
+      @media (max-width: 410px) {
+        margin-left: 15px;
+      }
+    }
+    margin-left: 25px;
+    &:first-child {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("/sneaker-store/img/icons/filters.svg");
+
+        width: 26px;
+        height: 26px;
+
+        left: -25px;
+        top: -5px;
+
+        background-size: auto;
+        background-repeat: no-repeat;
+        @media (max-width: 410px) {
+          display: none;
+        }
+      }
+    }
+    &:nth-child(2) {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("/sneaker-store/img/icons/sort.svg");
+
+        width: 26px;
+        height: 26px;
+
+        left: -25px;
+        top: -5px;
+
+        background-size: auto;
+        background-repeat: no-repeat;
+        @media (max-width: 410px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

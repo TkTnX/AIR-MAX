@@ -48,15 +48,8 @@
   top: 40%;
   left: 33px;
   @media (max-width: 525px) {
-    top: 20%;
-  }
-  @media (max-width: 320px) {
     display: none;
   }
-}
-.swiper-button-prev {
-}
-.swiper-button-next {
 }
 
 .swiper-pagination-bullet {
@@ -87,6 +80,9 @@
   &:active {
     background-color: #d3d3d3;
     bottom: 75px;
+    @media (max-width: 890px) {
+      bottom: 20px;
+    }
   }
   &:focus {
     border-color: black;
