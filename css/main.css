@@ -15,7 +15,16 @@
 /* styles */
 :root {
   --textColor: #000;
+  --company: #9c9c9c;
   --accent: #de343d;
+  --gray: #808080;
+}
+
+[class*=__container] {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
 }
 
 body {
@@ -30,6 +39,12 @@ body {
 
 a {
   color: inherit;
+}
+
+.title-2 {
+  color: var(--accent);
+  font-size: clamp(1.875rem, 1.693rem + 0.91vw, 2.375rem);
+  line-height: 40px; /* 106.553% */
 }
 
 .btn {
@@ -332,11 +347,6 @@ legend {
 }
 @media (max-width: 525px) {
   .swiper-pagination {
-    top: 20%;
-  }
-}
-@media (max-width: 320px) {
-  .swiper-pagination {
     display: none;
   }
 }
@@ -370,6 +380,11 @@ legend {
   background-color: #d3d3d3;
   bottom: 75px;
 }
+@media (max-width: 890px) {
+  .swiper-buyBtn:active {
+    bottom: 20px;
+  }
+}
 .swiper-buyBtn:focus {
   border-color: black;
 }
@@ -385,4 +400,223 @@ legend {
     font-size: 15px;
     bottom: 10px;
   }
+}
+
+.top-sellers {
+  padding: 84px 0 100px;
+}
+.top-sellers__container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+.top-sellers__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 750px) {
+  .top-sellers__top {
+    flex-direction: column;
+  }
+}
+.top-sellers__sort-list {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 750px) {
+  .top-sellers__sort-list {
+    padding-top: 35px;
+  }
+}
+@media (max-width: 325px) {
+  .top-sellers__sort-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+.top-sellers__see-btn {
+  text-align: center;
+}
+.top-sellers__btn {
+  display: inline-block;
+  margin-top: 78px;
+  color: var(--gray);
+  font-size: 20px;
+  line-height: 2.55;
+  transition: color 0.2s ease-in;
+}
+.top-sellers__btn:hover {
+  color: #9e9e9e;
+}
+.top-sellers__btn:active {
+  color: #4e4e4e;
+}
+.top-sellers__sort-item {
+  color: #808080;
+  font-size: 16px;
+  letter-spacing: 1.256px;
+  margin-left: 25px;
+}
+@media (max-width: 410px) {
+  .top-sellers__sort-item {
+    font-size: 14px;
+  }
+}
+.top-sellers__sort-item:not(:last-child) {
+  margin-left: clamp(1.875rem, 0.966rem + 4.55vw, 4.375rem);
+}
+@media (max-width: 410px) {
+  .top-sellers__sort-item:not(:last-child) {
+    margin-left: 15px;
+  }
+}
+.top-sellers__sort-item:first-child {
+  position: relative;
+}
+.top-sellers__sort-item:first-child::before {
+  content: "";
+  position: absolute;
+  background-image: url("/sneaker-store/img/icons/filters.svg");
+  width: 26px;
+  height: 26px;
+  left: -25px;
+  top: -5px;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+@media (max-width: 410px) {
+  .top-sellers__sort-item:first-child::before {
+    display: none;
+  }
+}
+.top-sellers__sort-item:nth-child(2) {
+  position: relative;
+}
+.top-sellers__sort-item:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background-image: url("/sneaker-store/img/icons/sort.svg");
+  width: 26px;
+  height: 26px;
+  left: -25px;
+  top: -5px;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+@media (max-width: 410px) {
+  .top-sellers__sort-item:nth-child(2)::before {
+    display: none;
+  }
+}
+
+.top-sellers__slider {
+  position: relative;
+}
+.swiper2 {
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper-wrapper {
+  display: inline-flex;
+  position: relative;
+}
+
+.swiper-slide {
+  position: relative;
+  z-index: 8;
+}
+
+.sellers__card {
+  max-width: 400px;
+}
+@media (max-width: 999px) {
+  .sellers__card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.sellers__img {
+  width: 100%;
+  min-width: 200px;
+  min-height: 200px;
+  padding: clamp(0.938rem, -0.313rem + 6.25vw, 4.375rem) clamp(0.938rem, 0.46rem + 2.39vw, 2.25rem) clamp(0.938rem, -0.994rem + 9.66vw, 6.25rem) 10px;
+}
+@media (max-width: 525px) {
+  .sellers__text {
+    text-align: center;
+  }
+}
+.sellers__company {
+  color: var(--company);
+  font-size: 22.006px;
+  line-height: 140%; /* 30.809px */
+  letter-spacing: 1.572px;
+}
+.sellers__name {
+  font-size: clamp(1.125rem, 0.966rem + 0.8vw, 1.563rem);
+  line-height: 1.4; /* 35.21px */
+}
+.sellers__price {
+  font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+  line-height: 1.4;
+}
+.sellers__sizes {
+  color: var(--accent);
+  font-size: clamp(0.938rem, 0.847rem + 0.45vw, 1.188rem);
+  line-height: 1.4;
+  letter-spacing: 1.572px;
+}
+
+.top-sellers__slider-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 110%;
+  position: absolute;
+  left: -5%;
+  top: 50%;
+}
+@media (max-width: 1510px) {
+  .top-sellers__slider-btns {
+    position: static;
+    width: auto;
+    justify-content: start;
+    gap: 50px;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 999px) {
+  .top-sellers__slider-btns {
+    display: none;
+  }
+}
+
+.sellers__btn-prev {
+  cursor: pointer;
+}
+.sellers__btn-prev path {
+  transition: all 0.1s ease-in;
+}
+.sellers__btn-prev:hover svg g path:hover {
+  fill: #424242;
+}
+.sellers__btn-prev:hover svg g path:active {
+  fill: #000000;
+}
+.sellers__btn-next {
+  transform: translateY(-7%) rotate(180deg);
+  cursor: pointer;
+}
+.sellers__btn-next path {
+  transition: all 0.1s ease-in;
+}
+.sellers__btn-next:hover svg g path:hover {
+  fill: #424242;
+}
+.sellers__btn-next:hover svg g path:active {
+  fill: #000000;
 }/*# sourceMappingURL=main.css.map */

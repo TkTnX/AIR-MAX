@@ -19,7 +19,16 @@
 
 :root {
   --textColor: #000;
+  --company: #9c9c9c;
   --accent: #de343d;
+  --gray: #808080;
+}
+
+[class*="__container"] {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
 }
 
 body {
@@ -34,6 +43,12 @@ body {
 
 a {
   color: inherit;
+}
+
+.title-2 {
+  color: var(--accent);
+  font-size: clamp(1.875rem, 1.693rem + 0.91vw, 2.375rem);
+  line-height: 40px; /* 106.553% */
 }
 
 .btn {
@@ -56,7 +71,6 @@ a {
 
 .open {
   transform: translateX(-350px);
-
 }
 
 .header__burger-btn {
