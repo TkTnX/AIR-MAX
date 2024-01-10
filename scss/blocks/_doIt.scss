@@ -1,0 +1,70 @@
+.doIt {
+  padding: 66px 0 87px;
+
+  // .doIt__container
+
+  &__container {
+    max-width: 1920px;
+    padding: 0;
+  }
+
+  // .doIt__title
+
+  &__title {
+    background-color: #999;
+    background-image: url("/sneaker-store/img/JustDoIt/bg-top.png");
+    width: 100%;
+    height: 68px;
+    background-position: center left; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  // .doIt__img
+
+  &__img {
+    background-color: #999;
+    background-image: url("/sneaker-store/img/JustDoIt/bg.jpg");
+    width: 100%;
+    height: 873px;
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    @media (max-width: 435px) {
+      height: 700px;
+    }
+    &::before {
+      content: "AIR MAX";
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      color: rgba(255, 255, 255, 0.14);
+      font-size: clamp(6.25rem, 2.841rem + 17.05vw, 15.625rem);
+      width: 100%;
+      text-align: center;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 508px;
+      height: 181px;
+
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      background-image: url("/sneaker-store/img/JustDoIt/nike-white.png");
+      background-position: center center; /* x y */
+      background-size: cover;
+      background-repeat: no-repeat;
+      @media (max-width: 690px) {
+        width: 280px;
+        height: 100px;
+      }
+    }
+  }
+}
