@@ -619,4 +619,219 @@ legend {
 }
 .sellers__btn-next:hover svg g path:active {
   fill: #000000;
+}
+
+.street {
+  padding: clamp(0rem, -2.841rem + 14.2vw, 7.813rem) 0 100px;
+}
+.street__container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.street__text {
+  font-size: clamp(5rem, 3.33rem + 4.31vw, 6.563rem);
+  line-height: 1.4; /* 147.198px */
+  text-transform: capitalize;
+  position: relative;
+}
+@media (max-width: 771px) {
+  .street__text {
+    text-align: center;
+  }
+}
+@media (max-width: 520px) {
+  .street__text {
+    font-size: clamp(1.875rem, 0.739rem + 5.68vw, 5rem);
+  }
+}
+.street__span1 {
+  background-color: black;
+  margin: 0 100px 0 100px;
+  position: relative;
+}
+@media (max-width: 771px) {
+  .street__span1 {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    z-index: -2;
+  }
+}
+@media (max-width: 530px) {
+  .street__span1 {
+    display: none;
+  }
+}
+.street__span1::before {
+  content: "";
+  left: -180px;
+  top: -100px;
+  position: absolute;
+  background-image: url("/sneaker-store/img/street/1.png");
+  background-position: center center; /* x y */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 318px;
+  height: 288px;
+}
+.street__span1::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 180px;
+  height: 90px;
+  border-radius: 42px;
+  z-index: -1;
+  left: -105px;
+  top: 20px;
+}
+@media (max-width: 585px) {
+  .street__span1::after {
+    display: none;
+  }
+}
+.street__span2 {
+  position: relative;
+}
+@media (max-width: 1330px) {
+  .street__span2 {
+    display: none;
+  }
+}
+@media (max-width: 1240px) {
+  .street__span2 {
+    display: block;
+    position: absolute;
+    left: 500px;
+    top: 145px;
+  }
+}
+@media (max-width: 888px) {
+  .street__span2 {
+    left: 0;
+    z-index: -2;
+  }
+}
+@media (max-width: 771px) {
+  .street__span2 {
+    display: none;
+  }
+}
+.street__span2::before {
+  content: "";
+  position: absolute;
+  background-image: url("/sneaker-store/img/street/2.png");
+  background-position: center center; /* x y */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 318px;
+  height: 288px;
+  left: 40px;
+  top: -130px;
+}
+@media (max-width: 1550px) {
+  .street__span2::before {
+    left: -20px;
+  }
+}
+.street__span2::after {
+  content: "";
+  position: absolute;
+  background-color: #ffb800;
+  width: 250px;
+  height: 90px;
+  border-radius: 42px;
+  z-index: -1;
+  top: 20px;
+  left: 10px;
+}
+@media (max-width: 888px) {
+  .street__span2::after {
+    display: none;
+  }
+}
+.street__span3 {
+  position: relative;
+}
+@media (max-width: 1330px) {
+  .street__span3 {
+    display: none;
+  }
+}
+@media (max-width: 1240px) {
+  .street__span3 {
+    display: block;
+    position: absolute;
+    bottom: 140px;
+    right: 450px;
+  }
+}
+@media (max-width: 1110px) {
+  .street__span3 {
+    left: 650px;
+  }
+}
+@media (max-width: 888px) {
+  .street__span3 {
+    left: 0;
+    z-index: -2;
+  }
+}
+@media (max-width: 771px) {
+  .street__span3 {
+    display: none;
+  }
+}
+.street__span3::before {
+  content: "";
+  position: absolute;
+  background-image: url("/sneaker-store/img/street/3.png");
+  background-position: center center; /* x y */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 218px;
+  height: 208px;
+  top: -40px;
+  left: 20px;
+}
+@media (max-width: 1450px) {
+  .street__span3::before {
+    left: 0;
+  }
+}
+.street__span3::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 180px;
+  height: 90px;
+  border-radius: 42px;
+  z-index: -1;
+  top: 20px;
+  left: 25px;
+}
+@media (max-width: 888px) {
+  .street__span3::after {
+    display: none;
+  }
+}
+.street__brands ul {
+  padding-top: clamp(2.5rem, 1.318rem + 5.91vw, 5.75rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media (max-width: 675px) {
+  .street__brands ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media (max-width: 675px) {
+  .street__brands ul li {
+    justify-self: center;
+  }
 }/*# sourceMappingURL=main.css.map */
