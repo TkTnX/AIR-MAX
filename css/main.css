@@ -896,4 +896,114 @@ legend {
     width: 280px;
     height: 100px;
   }
+}
+
+.catalog {
+  padding-bottom: clamp(3.125rem, -4.898rem + 40.11vw, 25.188rem);
+}
+.catalog__container {
+  max-width: 1323px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.catalog__list {
+  gap: 15px;
+}
+.catalog__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 992px) {
+  .catalog__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .catalog__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.catalog__card:nth-child(n+4):nth-child(-n+6) {
+  opacity: 0.5;
+}
+@media (max-width: 640px) {
+  .catalog__card:nth-child(n+4):nth-child(-n+6) {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .catalog__card {
+    justify-self: center;
+  }
+  .catalog__card:nth-child(even) {
+    justify-self: flex-end;
+  }
+}
+@media (max-width: 992px) and (max-width: 640px) {
+  .catalog__card:nth-child(even) {
+    justify-self: center;
+  }
+}
+.catalog__btn {
+  text-align: center;
+  margin-top: 50px;
+}
+.catalog__btn-link {
+  display: inline-block;
+  color: #000;
+  border: 2px solid #000;
+  padding: 15px 25px;
+  font-size: 20px;
+  letter-spacing: 1.6;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in, transform 0.1s;
+}
+.catalog__btn-link:hover {
+  background-color: #000;
+  color: white;
+}
+.catalog__btn-link:active {
+  transform: translateY(5px);
+}
+
+.footer {
+  background-color: #f9f9f9;
+  padding: 108px 0;
+}
+.footer__container {
+  max-width: 1343px;
+}
+.footer__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(3.125rem, 1.989rem + 5.68vw, 6.25rem);
+}
+@media (max-width: 583px) {
+  .footer__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.footer__company-item {
+  padding-bottom: 17px;
+}
+.footer__company-item a {
+  color: var(--accent);
+  font-size: 18px;
+  line-height: 1.25;
+  transition: color 0.1s ease-in;
+}
+.footer__company-item a:hover {
+  color: #f87077;
+}
+.footer__company-item a:active {
+  color: #a14b4f;
+}
+.footer__title {
+  color: var(--accent);
+  font-size: 21px;
+  font-family: "monument bold";
+  line-height: 1.25;
+  padding-bottom: 48px;
 }/*# sourceMappingURL=main.css.map */
