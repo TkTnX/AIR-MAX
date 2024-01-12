@@ -58,3 +58,27 @@ document.body.addEventListener("click", (event) => {
   if (event._isClickWithInMenu) return;
   document.querySelector("#menu").classList.remove("open");
 });
+
+/* TOP SELLERS GRID MODE */
+
+const gridBtn = document.querySelector("#top-sellers__grid-btn");
+const sortBtn = document.querySelector("#top-sellers__sort-btn");
+
+const topSellersGrid = document.querySelector("#top-sellers__grid");
+const topSellersSwiper = document.querySelector("#top-sellers__swiper");
+const gridSvg = document.querySelector("#gridSvg");
+const sortSvg = document.querySelector("#sortSvg");
+
+gridBtn.addEventListener("click", () => {
+  topSellersSwiper.classList.add("top-sellers__grid-invisible");
+  topSellersGrid.classList.add("top-sellers__grid-visible");
+  const gridSvgBlack = (gridSvg.style.fill = "black");
+  const sortSvgGray = (sortSvg.style.fill = "#808080");
+});
+
+sortBtn.addEventListener("click", () => {
+  topSellersSwiper.classList.remove("top-sellers__grid-invisible");
+  topSellersGrid.classList.remove("top-sellers__grid-visible");
+  const gridSvgBlack = (gridSvg.style.fill = "#808080");
+  const sortSvgGray = (sortSvg.style.fill = "black");
+});

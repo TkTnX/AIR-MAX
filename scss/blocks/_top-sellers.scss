@@ -110,3 +110,34 @@
     }
   }
 }
+
+.top-sellers {
+  // .top-sellers__container
+
+  &__container {
+  }
+
+  // .top-sellers__grid
+
+  &__grid {
+    display: none;
+  }
+
+  // .top-sellers__wrapper
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__grid-card {
+    justify-self: center;
+  }
+}
+
+.top-sellers__grid-visible {
+  display: block;
+}
+
+.top-sellers__grid-invisible {
+  display: none;
+}

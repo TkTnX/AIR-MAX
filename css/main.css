@@ -512,6 +512,25 @@ legend {
   }
 }
 
+.top-sellers__grid {
+  display: none;
+}
+.top-sellers__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.top-sellers__grid-card {
+  justify-self: center;
+}
+
+.top-sellers__grid-visible {
+  display: block;
+}
+
+.top-sellers__grid-invisible {
+  display: none;
+}
+
 .top-sellers__slider {
   position: relative;
 }

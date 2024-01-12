@@ -68,16 +68,65 @@
                 <ul class="top-sellers__sort-list">
                   <button class="top-sellers__sort-item">FILTERS</button>
                   <button class="top-sellers__sort-item">SORT BY</button>
-                  <button class="top-sellers__sort-item">
-                    <img src="./img/icons/format.svg" alt="Format button" />
+                  <button class="top-sellers__sort-item" id="top-sellers__sort-btn">
+                    <svg 
+                      width="26"
+                      height="26"
+                      viewBox="0 0 26 26"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_5_513)">
+                        <path id="sortSvg"
+                          d="M4.18567 11.5535C3.31683 11.5535 2.61548 12.2549 2.61548 13.1237C2.61548 13.9926 3.31683 14.6939 4.18567 14.6939C5.05451 14.6939 5.75586 13.9926 5.75586 13.1237C5.75586 12.2549 5.05451 11.5535 4.18567 11.5535ZM4.18567 5.27277C3.31683 5.27277 2.61548 5.97412 2.61548 6.84296C2.61548 7.71179 3.31683 8.41315 4.18567 8.41315C5.05451 8.41315 5.75586 7.71179 5.75586 6.84296C5.75586 5.97412 5.05451 5.27277 4.18567 5.27277ZM4.18567 17.8343C3.31683 17.8343 2.61548 18.5461 2.61548 19.4045C2.61548 20.2628 3.3273 20.9747 4.18567 20.9747C5.04404 20.9747 5.75586 20.2628 5.75586 19.4045C5.75586 18.5461 5.05451 17.8343 4.18567 17.8343ZM7.32605 20.4513H21.9812V18.3577H7.32605V20.4513ZM7.32605 14.1705H21.9812V12.0769H7.32605V14.1705ZM7.32605 5.79616V7.88975H21.9812V5.79616H7.32605Z"
+                          fill="#040404"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_5_513">
+                          <rect
+                            width="25.123"
+                            height="25.123"
+                            fill="white"
+                            transform="translate(-0.00219727 0.561523)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
                   </button>
-                  <button class="top-sellers__sort-item">
-                    <img src="./img/icons/grid.svg" alt="Grid button" />
+                  <button
+                    class="top-sellers__sort-item"
+                    id="top-sellers__grid-btn"
+                  >
+                    <svg
+                      width="26"
+                      height="26"
+                      viewBox="0 0 26 26"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_5_517)">
+                        <path id="gridSvg"
+                          d="M3.38367 3.70245V12.0768H11.758V3.70245H3.38367ZM9.66443 9.98321H5.47725V5.79604H9.66443V9.98321ZM3.38367 14.1704V22.5447H11.758V14.1704H3.38367ZM9.66443 20.4511H5.47725V16.264H9.66443V20.4511ZM13.8516 3.70245V12.0768H22.2259V3.70245H13.8516ZM20.1324 9.98321H15.9452V5.79604H20.1324V9.98321ZM13.8516 14.1704V22.5447H22.2259V14.1704H13.8516ZM20.1324 20.4511H15.9452V16.264H20.1324V20.4511Z"
+                          fill="#808080"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_5_517">
+                          <rect
+                            width="25.123"
+                            height="25.123"
+                            fill="white"
+                            transform="translate(0.243896 0.561523)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
                   </button>
                 </ul>
               </div>
             </div>
-            <div class="top-sellers__slider">
+            <div class="top-sellers__slider" id="top-sellers__swiper">
               <!-- Slider main container -->
               <div class="swiper2">
                 <!-- Additional required wrapper -->
@@ -202,6 +251,72 @@
                       </clipPath>
                     </defs>
                   </svg>
+                </div>
+              </div>
+            </div>
+            <div class="top-sellers__container">
+              <div class="top-sellers__grid" id="top-sellers__grid">
+                <div class="top-sellers__wrapper">
+                  <div class="swiper-slide top-sellers__grid-card">
+                    <div class="sellers__card">
+                      <img
+                        src="./img/top-sellers/1.png"
+                        class="sellers__img"
+                        alt="Sneaker"
+                      />
+                      <div class="sellers__text">
+                        <h3 class="sellers__company">Nike</h3>
+                        <h4 class="sellers__name">Air Force 1 Orche</h4>
+                        <p class="sellers__price">$9,985</p>
+                        <p class="sellers__sizes">Sizes: 8 - 10</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide top-sellers__grid-card">
+                    <div class="sellers__card">
+                      <img
+                        src="./img/top-sellers/2.png"
+                        class="sellers__img"
+                        alt="Sneaker"
+                      />
+                      <div class="sellers__text">
+                        <h3 class="sellers__company">Nike</h3>
+                        <h4 class="sellers__name">Air Force Panda</h4>
+                        <p class="sellers__price">$19,655</p>
+                        <p class="sellers__sizes">Sizes: 6 - 10</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide top-sellers__grid-card">
+                    <div class="sellers__card">
+                      <img
+                        src="./img/top-sellers/4.png"
+                        class="sellers__img"
+                        alt="Sneaker"
+                      />
+                      <div class="sellers__text">
+                        <h3 class="sellers__company">New Balance</h3>
+                        <h4 class="sellers__name">327’ Munsell White</h4>
+                        <p class="sellers__price">$11,999</p>
+                        <p class="sellers__sizes">Sizes: 7 - 11</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide top-sellers__grid-card">
+                    <div class="sellers__card">
+                      <img
+                        src="./img/top-sellers/3.png"
+                        class="sellers__img"
+                        alt="Sneaker"
+                      />
+                      <div class="sellers__text">
+                        <h3 class="sellers__company">Nike</h3>
+                        <h4 class="sellers__name">Air Force 1 ‘07</h4>
+                        <p class="sellers__price">$15,750</p>
+                        <p class="sellers__sizes">Sizes: 9 - 12</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
