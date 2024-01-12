@@ -519,6 +519,16 @@ legend {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+@media (max-width: 992px) {
+  .top-sellers__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .top-sellers__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .top-sellers__grid-card {
   justify-self: center;
 }
